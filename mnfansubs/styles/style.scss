@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --blue: #00b3ff;
+    --border: #393939;
+  }
+html {
+    font-family: Roboto, sans serif;
+}
+body {
+    color:#999;
+    background-color: #1d1d1d;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    width: 100%;
+    height: 61px;
+    background-color: #1d1d1d;
+    border-bottom: 1px solid #393939;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        width: 200px;
+        height: 29.594px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .menu {
+        width: max-content;
+        height: 100%;
+        display: flex;
+        .desc-menu {
+            width: 49px;
+            height: 60px;
+            border-left: 1px solid #393939;
+            color: #999;
+            font-size: 18px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .desc-menu:hover {
+            cursor: pointer;
+            color: #00b3ff;
+            transition: .2s all;
+        }
+    }
+}
+
+#zaiilaa {
+    display: none;
+}
+
+.header-search {
+    width: 280px;
+    height: 80px;
+    background-color: #00b3ff;
+    position: absolute;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    top: 61px;
+    z-index: 2;
+    display: none;
+    .header-drop {
+        width: 75%;
+        height: 50%;
+        .search {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        button {
+            position: absolute;
+            right: 41px;
+            top: 30px;
+            font-size: 18px;
+            background-color: Transparent;
+            border: none;  
+        }
+        .fas:hover {
+            cursor: pointer;
+            color: #00b3ff;
+            transition: .2s all;
+        }
+    }
+}
+#checkbox {
+    display: none;
+}
+#checkbox:checked ~ * .header-search {
+    display: flex ; 
+}
+
+
+
+// <!-------------------search end------------>
+
+#checkbox-2:checked ~ .film-dropdown {
+    display: block;
+}
+.film-dropdown {
+    width: 240px;
+    height: 345px;
+    max-width: 100%;
+    border-top: 3px solid #00b3ff;
+    background-color: #161616;
+    display: none;
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    top: 60px;
+    z-index: 999;
+    .film-dropdown-inside {
+        width: 100%;
+        height: 100%;
+        background-color: #161616;
+        .film-drop-child {
+            display: flex;
+            max-height: max-content;
+            width: 100%;
+            height: 16.6%;
+            .film-icon {
+                width: 20%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #393939;
+            }
+            .film-name {
+                width: 70%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+            .arrow {
+                width: 10%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 13px;
+            }
+        }
+
+        
+        .film-drop-child:nth-child(1) {
+            border-bottom: 2px dotted #393939;
+        }
+        .film-drop-child:nth-child(2) {
+            border-bottom: 2px dotted #393939;
+        }
+        .film-drop-child:nth-child(3) {
+            border-bottom: 2px dotted #393939;
+        }
+        .film-drop-child:nth-child(4) {
+            border-bottom: 2px dotted #393939;
+        }
+        .film-drop-child:nth-child(5) {
+            border-bottom: 2px dotted #393939;
+        }
+    }
+
+    .film-drop-child:hover .film-icon, .film-name, .arrow {
+        color: #00b3ff; 
+        transition: .3s all !important;
+    }
+    .film-icon:hover {
+        color: #00b3ff !important;
+        transition: .3s all !important;
+    } 
+    .film-name:hover {
+        color: #00b3ff !important;
+        transition: .3s all !important;
+    } 
+    .arrow:hover {
+        color: #00b3ff !important;
+        transition: .3s all !important;
+    }
+}
+@media screen and (min-width: 400px) {
+    .film-dropdown {
+        width: 335px;
+    }
+}
+#checkbox-2 {
+    display: none;
+}
+
+
+// <!-------------------film end----------------------->
+
+
+#checkbox-3 {
+    display: none;
+}
+#checkbox-3:checked ~ .film-dropdow {
+    display: block;
+}
+.film-dropdow {
+    width: 335px;
+    height: 300px;
+    max-width: 100%;
+    border-top: 3px solid #00b3ff;
+    background-color: #161616;
+    display: none;
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    top: 60px;
+    z-index: 999;
+    .film-dropdown-insid {
+        width: 100%;
+        height: 100%;
+        background-color: #161616;
+        .film-drop-chil {
+            display: flex;
+            max-height: max-content;
+            width: 100%;
+            height: 20%;
+            .film-icon {
+                width: 20%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #393939;
+            }
+            .film-name {
+                width: 70%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+            .arrow {
+                width: 10%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 13px;
+            }
+        }
+
+        
+        .film-drop-chil:nth-child(1) {
+            border-bottom: 2px dotted #393939;
+        }
+        .film-drop-chil:nth-child(2) {
+            border-bottom: 2px dotted #393939;
+        }
+        .film-drop-chil:nth-child(3) {
+            border-bottom: 2px dotted #393939;
+        }
+        .film-drop-chil:nth-child(4) {
+            border-bottom: 2px dotted #393939;
+        }
+    }
+
+    .film-drop-chil:hover .film-icon, .film-name, .arrow {
+        color: #00b3ff; 
+        transition: .3s all !important;
+    }
+    .film-icon:hover {
+        color: #00b3ff !important;
+        transition: .3s all !important;
+    } 
+    .film-name:hover {
+        color: #00b3ff !important;
+        transition: .3s all !important;
+    } 
+    .arrow:hover {
+        color: #00b3ff !important;
+        transition: .3s all !important;
+    }
+}
+
+// ----------------------------bar end ----------------->
+
+
+
+main {
+    width: 90%;
+    margin: auto;
+    // background-color: red;
+    margin-top: 22px;
+    .deed {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 15px;
+        .deed-child {
+            background-color: blue;
+            border-radius: 10px;
+            border: 1px solid #393939;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            .deed-img {
+                width: 100%;
+                height: 100%;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .text {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                top: 0;
+                background-color: rgba(0, 0, 0, .5);
+                display: flex;
+                align-items: flex-end;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-bottom: -20px;
+                line-height: 1;
+                p {
+                    color: white;
+                }
+            }
+            .text:hover > p{
+                color: #00b3ff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 960px) {
+    .deed {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: repeat(4, 1fr) !important;
+    }
+}
+@media screen and (max-width: 640px) {
+    .deed {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(6, 1fr)  !important;
+    }
+}
+
+
+// <!--------------------------------deed end ----------------------------------->
+
+
+.tsaash {
+    width: 100%;
+    height: 40px;
+    background-color: #161616;
+    border-radius: 10px;
+    color: rgba(153,153,153,.8);
+    transition: .5s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    > a {
+        color: white;
+    }
+}
+.tsaash:hover {
+    cursor: pointer;
+    background-color: #00b3ff ;
+}
+
+// <!--------------------------------banner start ----------------------------------->
+
+
+.banner-container {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    .banner {
+        width: 100%;
+        height: 100%;
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+// <!--------------------------------banner end ----------------------------------->
+
+// <!--------------------------------Дуусгасан анимэнууд start ----------------------------------->
+
+.duusgasan {
+    color: inherit; 
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 40px;
+    > a {
+        color: inherit;
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 450;
+    }
+}
+
+
+.swiper {
+    width: 100%;
+    height: 267px;
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    .swiper-child {
+        background-color: blue;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        .swiper-image {
+            width: 100%;
+            height: 100%;
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .linear {
+            width: 100%;
+            height: 100%;
+            background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),to(rgba(0,0,0,.8)));
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            line-height: 0;
+            .blue {
+                color: var(--blue);
+            }
+        }
+    }
+    .swiper-child:hover .linear {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+}
+.linear-one {
+    line-height: 1 !important;
+}
+
+@media screen and (max-width: 760px) {
+    .swiper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .swiper-child:nth-child(4) {
+        display: none;
+    }
+    .swiper-child:nth-child(5) {
+        display: none;
+    }
+    .swiper-child:nth-child(6) {
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    .swiper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .swiper-child:nth-child(3) {
+        display: none;
+    }
+    .swiper-child:nth-child(4) {
+        display: none;
+    }
+    .swiper-child:nth-child(5) {
+        display: none;
+    }
+    .swiper-child:nth-child(6) {
+        display: none;
+    }
+}
+
+
+// <!--------------------------------Дуусгасан анимэнууд ent ----------------------------------->
+
+.oruulj-baigaa {
+    color: inherit; 
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 40px;
+    > a {
+        color: inherit;
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 450;
+    }
+}
+
+
+// <!--------------------------------oruulj baigaa enanimuud end ----------------------------------->
+
+
+.anime-kinonuud {
+    color: inherit; 
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 40px;
+    > a {
+        color: inherit;
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 450;
+    }
+}
+
+// <!--------------------------------anime kinonuud end ----------------------------------->
+
+.netflix {
+    color: inherit; 
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 40px;
+    > a {
+        color: inherit;
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 450;
+    }
+}
+
+
+// <!--------------------------------netflixiin tsuvraluud end ----------------------------------->
+
+
+.shinkai {
+    color: inherit; 
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 40px;
+    > a {
+        color: inherit;
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 450;
+    }
+}
+        
+// <!--------------------------------shinkai end ----------------------------------->
+
+.hosoda {
+    @extend .shinkai;
+}
+
+// <!--------------------------------Найруулагч Хосода Маморүгийн цуглуулга end ----------------------------------->
+
+
+// <!--------------------------------MAIN end ----------------------------------->
+
+
+footer {
+    width: 100%;
+    background-color: inherit;
+    border: 1px solid var(--border);
+    margin-top: 20px;
+    .footer-deed {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid var(--border);
+        .footer-buttons {
+            width: 4%;
+            height: 100%;
+            border-left: 1px solid var(--border);
+            color: #a9a9a9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 19px;
+            transition: .2s all;
+            position: relative;
+            > a {
+                color: #a9a9a9;
+            }
+            .facebook {
+                position: absolute;
+                top: -38px;
+                font-size: 13px;
+                font-weight: 500;
+                background-color: #4a4646;
+                padding: 3px;
+                border-radius: 3px;
+                display: none;
+            }
+        }
+        .footer-buttons:hover >a{
+            color: var(--blue);
+            cursor: pointer;
+        }
+    }
+    .facebutton:hover .facebook {
+        display: block;
+    }
+
+    .footer-end {
+        width: 100%;
+        height: 60px;
+        background-color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 990px) {
+    .footer-buttons {
+        width: 33.3% !important;
+    }
+    .footer-deed {
+        justify-content: center !important;
+    }
+}
+.youtube {
+    position: absolute;
+    top: -38px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #4a4646;
+    padding: 3px;
+    border-radius: 3px;
+    display: none;
+}
+.you:hover .youtube{
+    display: block;
+}
+
+.ig {
+    position: absolute;
+    top: -38px;
+    right: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #4a4646;
+    padding: 3px;
+    border-radius: 3px;
+    display: none;
+}
+.instagram:hover .ig {
+    display: block;
+}
+// <!--------------------------------FOOTER end ----------------------------------->
+
+
